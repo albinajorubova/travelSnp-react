@@ -1,6 +1,6 @@
-import Intro from 'src/components/Intro/Intro';
-import Header from 'components/Header/Header';
 import React from 'react';
+import Intro from 'components/Intro/Intro';
+import Header from 'components/Header/Header';
 
 const Hero = () => {
   return (
@@ -11,4 +11,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default React.memo(Hero);
