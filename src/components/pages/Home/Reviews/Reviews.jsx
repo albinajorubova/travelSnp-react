@@ -1,11 +1,14 @@
+
+
 import React from 'react';
 import TitileSubtitile from 'components/TitileSubtitile/TitileSubtitile';
 
-const CreateTour = () => {
+const Reviews = () => {
   return (
     <>
       <TitileSubtitile
-        title="Собери свой тур"
+        title="Отзывы наших
+        путешественников"
         text1="Идейные соображения высшего порядка,"
         text2=" а также рамки и место обучения кадров"
       />
@@ -13,4 +16,4 @@ const CreateTour = () => {
   );
 };
 
-export default React.memo(CreateTour);
+export default React.memo(Reviews);
