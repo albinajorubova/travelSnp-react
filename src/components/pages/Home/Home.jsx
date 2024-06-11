@@ -1,41 +1,31 @@
 import React from 'react';
 import cx from 'classnames';
 import { string } from 'prop-types';
-import Hero from './Hero/Hero';
-import Footer from 'components/Footer/Footer';
-import CreateTour from './CreateTour/CreateTour';
-import Tours from './Tours/Tours';
-import Reviews from './Reviews/Reviews';
-import Pictures from './Pictures/Pictures';
+
+import Tabs from 'components/Tabs';
+import Footer from 'components/Footer';
+
+import Hero from './Hero';
+import CreateTour from './CreateTour';
+import Tours from './Tours';
+import Reviews from './Reviews';
+import Pictures from './Pictures';
 import Histories from './Histories';
-import Tabs from 'components/Tabs/Tabs';
 
 import s from './Home.module.scss';
 
 const Home = ({ className }) => {
+  const SectionClassName = cx(s.section, className);
+
   return (
     <div className={cx(s.root, className)}>
-
-      <div className={s.section}>
-        <Hero />
-      </div>
-      <div className={s.section}>
-        <Tours />
-      </div>
-      <div className={s.section}>
-        <CreateTour />
-      </div>
-      <div className={s.section}>
-        <Reviews />
-      </div>
-      <div className={s.section}>
-        <Pictures />
-      </div>
-      <div className={s.section}>
-        <Histories />
-      </div>
-      <div className={s.section}>Home</div>
-      <Footer />
+      <Hero className={SectionClassName} />
+      <Tours className={SectionClassName} />
+      <CreateTour className={SectionClassName} />
+      <Reviews className={SectionClassName} />
+      <Pictures className={SectionClassName} />
+      <Histories className={SectionClassName} />
+      <Footer className={SectionClassName} />
     </div>
   );
 };

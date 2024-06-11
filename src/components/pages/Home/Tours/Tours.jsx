@@ -4,12 +4,10 @@ import Tabs from 'components/Tabs/Tabs';
 
 const Tours = () => {
   return (
-    <>
-      <TitileSubtitile
-        title="Выбери свой тур"
-      />
-      <Tabs/>
-    </>
+    <section>
+      <TitileSubtitile title="Выбери свой тур" />
+      <Tabs />
+    </section>
   );
 };
 

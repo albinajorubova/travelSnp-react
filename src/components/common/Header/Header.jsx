@@ -1,8 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
+
+import cx from 'classnames';
 import s from './Header.module.scss';
 
-const links = [
+const Links = [
   {
     id: 1,
     title: 'Туры',
@@ -29,20 +31,20 @@ const Header = () => {
   return (
     <header className={s.header}>
       <div
-        className={s.scroll__header}
+        className={s.scroll}
         id="scroll1"
       >
-        <div className={s.header__inner}>
+        <div className={s.inner}>
           <Link
             href="#"
             passHref
-            className={s.header__logo}
+            className={s.logo}
           >
             YourTour
           </Link>
 
-          <nav className={s.header__nav}>
-            {links.map(link => (
+          <nav className={s.nav}>
+            {Links.map(link => (
               <Link
                 key={link.id}
                 href={link.url}
@@ -55,7 +57,7 @@ const Header = () => {
           </nav>
           <Link
             href="tel:+7 999 999 99 99"
-            className={`${s.nav__link} ${s.numb}`}
+            className={cx(s.nav__link, s.numb)}
           >
             +7 999 999 99 99
           </Link>
