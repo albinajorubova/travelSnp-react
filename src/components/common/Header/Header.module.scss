@@ -41,7 +41,7 @@
 .navlink-item {
   display: none;
 
-  &.active {
+  &:active {
     display: block;
   }
 }

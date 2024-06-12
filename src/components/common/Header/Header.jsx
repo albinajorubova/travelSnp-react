@@ -1,29 +1,30 @@
 import React from 'react';
+import cx from 'classnames';
+
 import Link from 'next/link';
 
-import cx from 'classnames';
 import s from './Header.module.scss';
 
 const Links = [
   {
     id: 1,
     title: 'Туры',
-    url: '#chooseTour',
+    href: '#tours',
   },
   {
     id: 2,
     title: 'Создать Тур',
-    url: '#createTour',
+    href: '#createTour',
   },
   {
     id: 3,
     title: 'Отзывы',
-    url: '#reviews',
+    href: '#reviews',
   },
   {
     id: 4,
     title: 'Истории',
-    url: '#story',
+    href: '#histories',
   },
 ];
 
@@ -47,7 +48,7 @@ const Header = () => {
             {Links.map(link => (
               <Link
                 key={link.id}
-                href={link.url}
+                href={link.href}
                 passHref
                 className={s.nav__link}
               >

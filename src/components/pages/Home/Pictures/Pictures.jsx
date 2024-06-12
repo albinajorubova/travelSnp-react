@@ -1,10 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import TitileSubtitile from 'components/TitileSubtitile/TitileSubtitile';
+
+import TitileSubtitile from 'components/TitileSubtitile';
 
 const Pictures = ({ className }) => {
   return (
-    <section className={className}>
+    <section
+      id="pictures"
+      className={className}
+    >
       <TitileSubtitile
         title="Фотографии путешествий"
         text1="Идейные соображения высшего порядка,"

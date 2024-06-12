@@ -25,7 +25,7 @@ const Home = ({ className }) => {
       <Reviews className={SectionClassName} />
       <Pictures className={SectionClassName} />
       <Histories className={SectionClassName} />
-      <Footer className={SectionClassName} />
+      <Footer />
     </div>
   );
 };

@@ -2,7 +2,7 @@
   background:
     url('/images/header.jpg') center / cover no-repeat,
     lightgray 50% / cover no-repeat;
-  height: 52rem;
+  height: 47rem;
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
@@ -48,16 +48,16 @@
   letter-spacing: -0.01em;
   cursor: pointer;
   transition: background 0.3s ease;
-}
 
-.button:hover {
-  background: #efa501;
-  color: #ffffff;
-}
+  &:hover {
+    background: #efa501;
+    color: #ffffff;
+  }
 
-.button:active {
-  background: #f8e6be;
-  color: #333;
+  &:active {
+    background: #f8e6be;
+    color: #333;
+  }
 }
 
 .container {

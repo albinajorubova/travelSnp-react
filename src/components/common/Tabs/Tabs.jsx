@@ -1,17 +1,24 @@
-import React from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-
+import React, { useState } from 'react';
 import s from './Tabs.module.scss';
-const Tab = ['Популярные', 'Авторские', 'Походы', 'Сплавы', 'Велопрогулки'];
+import Link from 'next/link';
+
+const tabs = ['Популярные', 'Авторские', 'Походы', 'Сплавы', 'Велопрогулки'];
+
 const Tabs = () => {
+  const [activeTab, setActiveTab] = useState('Популярные');
+
+  const handleClick = tab => {
+    setActiveTab(tab);
+  };
+
   return (
-    <nav className={s.tabs__main}>
-      {Tab.map(tab => (
+    <nav className={s.tabs}>
+      {tabs.map(tab => (
         <Link
-          href={'/Tours'}
+          href=""
           key={tab}
-          className={s.main__link}
+          className={`${s.link} ${activeTab === tab ? s.active : ''}`}
+          onClick={() => handleClick(tab)}
         >
           {tab}
         </Link>

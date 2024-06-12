@@ -16,6 +16,12 @@ body {
     Droid Sans,
     Helvetica Neue,
     sans-serif;
+
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  background: #f9f7f4;
+  box-sizing: border-box;
 }
 
 a {

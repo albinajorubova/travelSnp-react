@@ -1,10 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import TitileSubtitile from 'components/TitileSubtitile/TitileSubtitile';
+
+import TitileSubtitile from 'components/TitileSubtitile';
 
 const CreateTour = ({ className }) => {
   return (
-    <section className={className}>
+    <section
+      id="createTour"
+      className={className}
+    >
       <TitileSubtitile
         title="Собери свой тур"
         text1="Идейные соображения высшего порядка,"

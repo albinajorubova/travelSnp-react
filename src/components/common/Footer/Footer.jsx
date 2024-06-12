@@ -1,10 +1,11 @@
 import React from 'react';
-import { string } from 'prop-types';
 import cx from 'classnames';
+import { string } from 'prop-types';
+
 import s from './Footer.module.scss';
 
-const Footer = ({ className }) => {
-  return <div className={cx(s.root, className)}>Footer</div>;
+const Footer = () => {
+  return <div className={cx(s.root)}>Footer</div>;
 };
 
 Footer.propTypes = {

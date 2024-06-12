@@ -1,6 +1,6 @@
 import React from 'react';
-import { string } from 'prop-types';
 import cx from 'classnames';
+import { string } from 'prop-types';
 
 import s from './Button.module.scss';
 

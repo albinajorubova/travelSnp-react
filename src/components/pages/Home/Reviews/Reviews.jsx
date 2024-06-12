@@ -1,10 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import TitileSubtitile from 'components/TitileSubtitile/TitileSubtitile';
+
+import TitileSubtitile from 'components/TitileSubtitile';
 
 const Reviews = ({ className }) => {
   return (
-    <section className={className}>
+    <section
+      id="reviews"
+      className={className}
+    >
       <TitileSubtitile
         title="Отзывы наших путешественников"
         text1="Идейные соображения высшего порядка,"

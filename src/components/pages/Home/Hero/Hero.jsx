@@ -1,11 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import Intro from 'components/Intro/Intro';
 import Header from 'components/Header/Header';
 
 const Hero = ({ className }) => {
   return (
-    <section className={className}>
+    <section
+      id="Hero"
+      className={className}
+    >
       <Header />
       <Intro />
     </section>
