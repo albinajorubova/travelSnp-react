@@ -7,8 +7,8 @@ const Intro = () => {
   return (
     <section className={s.intro}>
       <div className={s.container}>
-        <div className={s.intro__inner}>
-          <h1 className={s.intro__title}>Идеальные путешествия существуют</h1>
+        <div className={s.inner}>
+          <h1 className={s.title}>Идеальные путешествия существуют</h1>
           <p className={s.p}>
             Идейные соображения высшего порядка, а также рамки и <br />
             место обучения кадров

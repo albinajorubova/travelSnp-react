@@ -1,0 +1,27 @@
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+
+  p,
+  span {
+    margin: 0;
+    font-family: 'Roboto';
+    font-style: normal;
+    color: #ffffff;
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 122%;
+  }
+
+  span {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 142%;
+    letter-spacing: -0.01em;
+  }
+}

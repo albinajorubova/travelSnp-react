@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import s from './TitileSubtitile.module.scss';
 
 const TitleSubtitile = ({ title, text1, text2 }) => {

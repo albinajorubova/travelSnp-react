@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import TitileSubtitile from 'components/TitileSubtitile';
 import Tabs from 'components/Tabs';
+import PopularBlock from 'components/PopularBlock';
 
 const Tours = ({ className }) => {
   return (
@@ -12,6 +13,7 @@ const Tours = ({ className }) => {
     >
       <TitileSubtitile title="Выбери свой тур" />
       <Tabs />
+      <PopularBlock />
     </section>
   );
 };

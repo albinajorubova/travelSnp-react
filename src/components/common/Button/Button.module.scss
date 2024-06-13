@@ -1,3 +1,20 @@
 .root {
   position: relative;
 }
+
+.btn {
+  width: 199px;
+  height: 42px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 23px;
+  line-height: 122%;
+  color: #ffffff;
+}

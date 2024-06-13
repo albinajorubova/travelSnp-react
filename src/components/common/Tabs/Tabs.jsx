@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import s from './Tabs.module.scss';
+
 import Link from 'next/link';
+
+import s from './Tabs.module.scss';
 
 const tabs = ['Популярные', 'Авторские', 'Походы', 'Сплавы', 'Велопрогулки'];
 

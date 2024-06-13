@@ -1,24 +1,30 @@
 import React from 'react';
 import cx from 'classnames';
-import { string } from 'prop-types';
+
+import PropTypes from 'prop-types';
 
 import s from './Button.module.scss';
 
 const Button = ({ className, type }) => {
   return (
     <button
-      className={cx(s.root, className)}
-      type={type} // eslint-disable-line
+      className={cx(s.btn, className)}
+      type={type}
     >
-      Кнопка
+      Подробнее
+      <img
+        src="images/popular/str.svg"
+        alt=""
+      />
     </button>
   );
 };
 
 Button.propTypes = {
-  className: string,
-  type: string,
+  className: PropTypes.string,
+  type: PropTypes.string,
 };
+
 Button.defaultProps = {
   type: 'button',
 };
