@@ -11,6 +11,10 @@
   transition: background-size 0.3s ease;
   transform-origin: center center;
   cursor: pointer;
+
+  &:hover {
+    background-size: auto 107%;
+  }
 }
 
 .back {
@@ -36,8 +40,6 @@
 
 .item,
 .back {
-  transition: all 0.1s ease;
-
   &:hover .btn,
   &:active .btn {
     position: relative;
