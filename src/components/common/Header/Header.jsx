@@ -50,7 +50,7 @@ const Header = () => {
                 key={link.id}
                 href={link.href}
                 passHref
-                className={s.nav__link}
+                className={s.link}
               >
                 {link.title}
               </Link>
@@ -58,7 +58,7 @@ const Header = () => {
           </nav>
           <Link
             href="tel:+7 999 999 99 99"
-            className={cx(s.nav__link, s.numb)}
+            className={cx(s.link, s.numb)}
           >
             +7 999 999 99 99
           </Link>

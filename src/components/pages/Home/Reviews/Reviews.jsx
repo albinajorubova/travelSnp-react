@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import TitileSubtitile from 'components/TitileSubtitile';
+import Review from 'components/Review';
 
 const Reviews = ({ className }) => {
   return (
@@ -14,6 +15,7 @@ const Reviews = ({ className }) => {
         text1="Идейные соображения высшего порядка,"
         text2="а также рамки и место обучения кадров"
       />
+      <Review />
     </section>
   );
 };

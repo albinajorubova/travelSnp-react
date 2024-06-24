@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 import s from './Tabs.module.scss';
 
-const tabs = ['Популярные', 'Авторские', 'Походы', 'Сплавы', 'Велопрогулки'];
+const Tab = ['Популярные', 'Авторские', 'Походы', 'Сплавы', 'Велопрогулки'];
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState('Популярные');
@@ -15,7 +15,7 @@ const Tabs = () => {
 
   return (
     <nav className={s.tabs}>
-      {tabs.map(tab => (
+      {Tab.map(tab => (
         <Link
           href=""
           key={tab}

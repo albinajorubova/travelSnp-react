@@ -10,7 +10,7 @@ import s from './PopularBlock.module.scss';
 
 const PopularBlock = ({ cardsData }) => {
   return (
-    <div className={s.popular__block}>
+    <div className={s.block}>
       {cardsData.map((card, index) => (
         <PopularItem
           key={index}

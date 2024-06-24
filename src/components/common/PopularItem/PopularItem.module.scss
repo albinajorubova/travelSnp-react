@@ -2,18 +2,20 @@
   width: 100%;
   height: 531px;
   position: relative;
-  background-position: center;
+
   border-radius: 50px;
+
   background: url('/images/popular/1.jpg');
   background-repeat: no-repeat;
-  background-size: auto 104%;
+  background-size: auto 110%;
+  background-position: 50% 50%;
 
   transition: background-size 0.3s ease;
   transform-origin: center center;
   cursor: pointer;
 
   &:hover {
-    background-size: auto 107%;
+    background-size: auto 120%;
   }
 }
 

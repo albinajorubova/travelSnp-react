@@ -1,0 +1,33 @@
+.block {
+  display: flex;
+  gap: 25px;
+
+  & .social {
+    gap: 10px;
+  }
+}
+
+.social {
+  display: flex;
+  gap: 12px;
+  transition: border-bottom 0.3s ease;
+  align-items: center;
+
+  & svg {
+    width: 26px;
+    height: 26px;
+  }
+  & span {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 142%;
+    border-bottom: 1px solid transparent;
+    color: #1b1f2b;
+  }
+
+  &:hover span {
+    border-bottom: 1px solid #1b1f2b;
+  }
+}
