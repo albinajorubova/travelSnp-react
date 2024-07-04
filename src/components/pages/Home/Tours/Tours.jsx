@@ -5,7 +5,7 @@ import TitileSubtitile from 'components/TitileSubtitile';
 import Tabs from 'components/Tabs';
 import PopularBlock from 'components/PopularBlock';
 
-const CardsData = [
+const CARDSDATA = [
   {
     title: 'в горы',
     price: 'от 80 000 руб',
@@ -46,7 +46,7 @@ const Tours = ({ className }) => {
     >
       <TitileSubtitile title="Выбери свой тур" />
       <Tabs />
-      <PopularBlock cardsData={CardsData} />
+      <PopularBlock cardsData={CARDSDATA} />
     </section>
   );
 };

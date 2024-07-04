@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 import s from './Review.module.scss';
 
-const Reviews = [
+const REVIEWS = [
   {
     text: 'Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить значение модели развития.',
     autor: 'Мария',
@@ -24,7 +24,7 @@ const Reviews = [
 const Review = () => {
   return (
     <div className={s.card}>
-      {Reviews.map(reviews => (
+      {REVIEWS.map(reviews => (
         <div className={s.item}>
           <p>{reviews.text}</p>
           <div className={s.author}>

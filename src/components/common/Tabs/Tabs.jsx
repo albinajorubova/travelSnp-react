@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
+import cx from 'classnames';
 
 import Link from 'next/link';
 
 import s from './Tabs.module.scss';
 
-const Tab = ['Популярные', 'Авторские', 'Походы', 'Сплавы', 'Велопрогулки'];
+const TAB = ['Популярные', 'Авторские', 'Походы', 'Сплавы', 'Велопрогулки'];
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState('Популярные');
@@ -15,11 +16,11 @@ const Tabs = () => {
 
   return (
     <nav className={s.tabs}>
-      {Tab.map(tab => (
+      {TAB.map(tab => (
         <Link
           href=""
           key={tab}
-          className={`${s.link} ${activeTab === tab ? s.active : ''}`}
+          className={cx(s.link, { [s.active]: activeTab === tab })}
           onClick={() => handleClick(tab)}
         >
           {tab}

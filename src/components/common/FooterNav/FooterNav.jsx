@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 import s from './FooterNav.module.scss';
 
-const Links = [
+const LINKS = [
   {
     id: 1,
     title: 'instagram',
@@ -30,7 +30,7 @@ const Links = [
 const FooterNav = () => {
   return (
     <nav className={s.block}>
-      {Links.map(link => (
+      {LINKS.map(link => (
         <Link
           key={link.id}
           href={link.href}

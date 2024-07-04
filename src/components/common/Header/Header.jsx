@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 import s from './Header.module.scss';
 
-const Links = [
+const LINKS = [
   {
     id: 1,
     title: 'Туры',
@@ -45,7 +45,7 @@ const Header = () => {
           </Link>
 
           <nav className={s.nav}>
-            {Links.map(link => (
+            {LINKS.map(link => (
               <Link
                 key={link.id}
                 href={link.href}

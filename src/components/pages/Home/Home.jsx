@@ -15,16 +15,14 @@ import Histories from './Histories';
 import s from './Home.module.scss';
 
 const Home = ({ className }) => {
-  const SectionClassName = cx(s.section, className);
-
   return (
     <div className={cx(s.root, className)}>
-      <Hero className={SectionClassName} />
-      <Tours className={SectionClassName} />
-      <CreateTour className={SectionClassName} />
-      <Reviews className={SectionClassName} />
-      <Pictures className={SectionClassName} />
-      <Histories className={SectionClassName} />
+      <Hero className={s.section} />
+      <Tours className={s.section} />
+      <CreateTour className={s.section} />
+      <Reviews className={s.section} />
+      <Pictures className={s.section} />
+      <Histories className={s.section} />
       <Footer />
     </div>
   );

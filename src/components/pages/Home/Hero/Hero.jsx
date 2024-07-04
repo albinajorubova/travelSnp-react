@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Intro from 'components/Intro/Intro';
-import Header from 'components/Header/Header';
+import Intro from 'components/Intro';
+import Header from 'components/Header';
 
 const Hero = ({ className }) => {
   return (

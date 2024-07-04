@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import TitileSubtitile from 'components/TitileSubtitile';
+import HistoryDesc from 'components/HistoryDesc';
 
 const Histories = ({ className }) => {
   return (
@@ -14,6 +15,7 @@ const Histories = ({ className }) => {
         text1="Идейные соображения высшего порядка,"
         text2="а также рамки и место обучения кадров"
       />
+      <HistoryDesc />
     </section>
   );
 };

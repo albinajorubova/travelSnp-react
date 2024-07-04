@@ -1,6 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
-import PropTypes from 'prop-types';
+import PropTypes, { arrayOf, string, shape } from 'prop-types';
 
 import Link from 'next/link';
 
@@ -24,11 +24,11 @@ const PopularBlock = ({ cardsData }) => {
 };
 
 PopularBlock.propTypes = {
-  cardsData: PropTypes.arrayOf(
-    PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      price: PropTypes.string.isRequired,
-      imageSrc: PropTypes.string.isRequired,
+  cardsData: arrayOf(
+    shape({
+      title: string.isRequired,
+      price: string.isRequired,
+      imageSrc: string.isRequired,
     })
   ).isRequired,
 };
