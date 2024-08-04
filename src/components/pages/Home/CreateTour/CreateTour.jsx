@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import TitileSubtitile from 'components/TitileSubtitile';
+import Form from 'components/Form';
 
 const CreateTour = ({ className }) => {
   return (
@@ -14,6 +15,7 @@ const CreateTour = ({ className }) => {
         text1="Идейные соображения высшего порядка,"
         text2="а также рамки и место обучения кадров"
       />
+      <Form />
     </section>
   );
 };
