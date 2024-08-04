@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 
 import TitileSubtitile from 'components/TitileSubtitile';
 import Tabs from 'components/Tabs';
-import PopularBlock from 'components/PopularBlock';
+import PopularItem from 'components/PopularItem';
+
+import s from './Tours.module.scss';
 
 const CARDSDATA = [
   {
@@ -46,7 +48,16 @@ const Tours = ({ className }) => {
     >
       <TitileSubtitile title="Выбери свой тур" />
       <Tabs />
-      <PopularBlock cardsData={CARDSDATA} />
+      <div className={s.block}>
+        {CARDSDATA.map((card, index) => (
+          <PopularItem
+            key={index}
+            title={card.title}
+            price={card.price}
+            imageSrc={card.imageSrc}
+          />
+        ))}
+      </div>
     </section>
   );
 };

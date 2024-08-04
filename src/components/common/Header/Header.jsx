@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import cx from 'classnames';
 
 import Link from 'next/link';
@@ -29,12 +29,24 @@ const LINKS = [
 ];
 
 const Header = () => {
+  const [fix, setFix] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      console.log('window.scrollY:', window.scrollY);
+      if (window.scrollY >= 450) {
+        setFix(true);
+      } else {
+        setFix(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <header className={s.header}>
-      <div
-        className={s.scroll}
-        id="scroll1"
-      >
+      <div className={cx(fix ? [s.scroll] : [s.noscroll])}>
         <div className={s.inner}>
           <Link
             href="#"

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import cx from 'classnames';
 import { string } from 'prop-types';
 
@@ -11,6 +11,7 @@ import Tours from './Tours';
 import Reviews from './Reviews';
 import Pictures from './Pictures';
 import Histories from './Histories';
+import ContactBanner from './ContactBanner';
 
 import s from './Home.module.scss';
 
@@ -23,6 +24,7 @@ const Home = ({ className }) => {
       <Reviews className={s.section} />
       <Pictures className={s.section} />
       <Histories className={s.section} />
+      <ContactBanner />
       <Footer />
     </div>
   );
