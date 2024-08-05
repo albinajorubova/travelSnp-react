@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import cx from 'classnames';
 
 import TitileSubtitile from 'components/TitileSubtitile';
 import Tabs from 'components/Tabs';
@@ -44,7 +45,7 @@ const Tours = ({ className }) => {
   return (
     <section
       id="tours"
-      className={className}
+      className={cx({ className }, s.tour)}
     >
       <TitileSubtitile title="Выбери свой тур" />
       <Tabs />

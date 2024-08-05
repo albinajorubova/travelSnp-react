@@ -6,8 +6,8 @@ import s from './TitileSubtitile.module.scss';
 const TitleSubtitile = ({ title, text1, text2 }) => {
   return (
     <div className={s.block}>
-      <h1 className={s.main__title}>{title}</h1>
-      <div>
+      <h1 className={s.title}>{title}</h1>
+      <div className={s.subTitile}>
         <p className={s.text1}>{text1}</p>
         <p className={s.text2}>{text2}</p>
       </div>

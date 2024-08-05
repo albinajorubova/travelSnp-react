@@ -86,3 +86,54 @@
   justify-content: center;
   align-items: center;
 }
+
+@media (max-width: 1024px) {
+  .intro {
+    background:
+      linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 39.9%),
+      linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%),
+      url('/images/header1024.png') center / cover no-repeat,
+      lightgray 50% / cover no-repeat;
+  }
+  .p {
+    max-width: 442px;
+    width: 100%;
+    & br {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 55px;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 360px) {
+  .intro {
+    background:
+      linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 39.9%),
+      linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%),
+      url('/images/header1024.png') center / auto 100% no-repeat,
+      lightgray 50% / cover no-repeat;
+  }
+
+  .intro {
+    width: 360px;
+    height: 530px;
+  }
+  .title {
+    font-size: 34px;
+    width: auto;
+    height: auto;
+  }
+
+  .p {
+    font-size: 16px;
+    max-width: 310px;
+    width: 100%;
+  }
+}

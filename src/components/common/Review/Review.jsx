@@ -21,12 +21,27 @@ const REVIEWS = [
   },
 ];
 
+const insertBr = text => {
+  const maxLength = 299;
+  const breakLength = 168;
+
+  if (text.length > maxLength) {
+    return (
+      text.slice(0, breakLength) + '<br /><br />' + text.slice(breakLength)
+    );
+  }
+  return text;
+};
+
 const Review = () => {
   return (
     <div className={s.card}>
-      {REVIEWS.map(reviews => (
-        <div className={s.item}>
-          <p>{reviews.text}</p>
+      {REVIEWS.map((reviews, index) => (
+        <div
+          key={index}
+          className={s.item}
+        >
+          <p dangerouslySetInnerHTML={{ __html: insertBr(reviews.text) }} />
           <div className={s.author}>
             <div className={s.description}>
               <h1>{reviews.autor}</h1>
@@ -34,7 +49,7 @@ const Review = () => {
             </div>
             <img
               src={reviews.img}
-              alt="#"
+              alt={reviews.autor}
             />
           </div>
         </div>

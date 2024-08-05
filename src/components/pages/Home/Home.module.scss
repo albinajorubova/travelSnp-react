@@ -7,3 +7,9 @@
   padding-bottom: 135px;
   margin: 0 auto;
 }
+
+@media (max-width: 480px) {
+  .section {
+    padding-bottom: 75px;
+  }
+}

@@ -5,3 +5,55 @@
   gap: 30px;
   margin: 0 auto;
 }
+
+.tour {
+  padding: 0 20px 135px 20px;
+}
+
+@media (max-width: 1440px) {
+  .tour {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .block {
+    max-width: 914px;
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .block {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .block {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 350px;
+  }
+
+  .tour {
+    width: 360px;
+    padding: 0 20px 75px 20px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 360px) {
+  .block {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 318px;
+  }
+}
