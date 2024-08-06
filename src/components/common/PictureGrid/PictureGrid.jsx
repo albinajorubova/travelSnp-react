@@ -14,6 +14,7 @@ const PictureGrid = ({ imagePaths }) => {
         <div
           className={s.item}
           key={index}
+          id={index}
         >
           <img
             className={s.img}
