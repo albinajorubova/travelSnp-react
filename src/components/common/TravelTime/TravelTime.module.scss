@@ -74,3 +74,45 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .block {
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    padding: 0px 30px;
+
+    margin-bottom: 75px;
+    & img {
+      width: 130px;
+      height: 133px;
+      border-radius: 20px;
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .text {
+    text-align: center;
+
+    & h1 {
+      font-size: 23px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 120%;
+    }
+
+    & p,
+    & span {
+      font-size: 16px;
+      display: flex;
+      flex-direction: column;
+      width: 65%;
+      margin: 0 auto;
+    }
+
+    & span {
+      margin: 0;
+    }
+  }
+}

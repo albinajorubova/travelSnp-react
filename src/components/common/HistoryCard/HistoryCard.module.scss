@@ -75,9 +75,10 @@
 }
 
 .back {
+  max-width: 100%;
   width: 1170px;
   height: 567px;
-  max-width: 100%;
+
   position: inherit;
   box-sizing: border-box;
   padding: 60px;
@@ -135,4 +136,99 @@
   margin-left: -30px;
   border-radius: 50px;
   overflow: visible;
+}
+
+@media (max-width: 1024px) {
+  .back {
+    width: 918px;
+    height: 567px;
+  }
+
+  .block {
+    width: 918px;
+    height: 567px;
+    background-size: auto 100%;
+    background-position: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .back {
+    & h3 {
+      margin-bottom: 20px;
+      font-size: 23px;
+      margin-right: 110px;
+    }
+
+    & p,
+    & li {
+      font-size: 20px;
+      width: auto;
+    }
+  }
+
+  .social {
+    display: none;
+  }
+
+  .section {
+    &:hover .btnHovered {
+      margin-left: -10px;
+    }
+
+    &:active .btnHovered {
+      margin-left: -10px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    border-radius: 20px;
+  }
+
+  .back {
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .block {
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 360px) {
+  .back {
+    width: 318px;
+    height: 455px;
+    padding: 30px;
+  }
+
+  .back {
+    & h3 {
+      margin-bottom: 20px;
+      font-size: 23px;
+      margin-right: 110px;
+    }
+    & p,
+    & li {
+      font-size: 16px;
+      width: auto;
+    }
+  }
+
+  .btn {
+    width: 170px;
+
+    font-size: 16px;
+
+    border-radius: 30px;
+  }
+
+  .block {
+    width: 318px;
+    height: 455px;
+    background-size: auto 100%;
+    border-radius: 20px;
+  }
 }

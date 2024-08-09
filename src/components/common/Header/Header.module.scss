@@ -98,9 +98,13 @@
     line-height: 142%;
   }
 
-  & .nav__link:hover {
+  & .link:hover {
     cursor: pointer;
     border-bottom: 1px solid #1b1f2b;
+  }
+
+  & .inner {
+    padding-top: 20px;
   }
 }
 

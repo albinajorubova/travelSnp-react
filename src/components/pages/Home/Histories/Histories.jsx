@@ -1,14 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import cx from 'classnames';
 
 import TitileSubtitile from 'components/TitileSubtitile';
 import HistoryCard from 'components/HistoryCard';
+
+import s from './Histories.module.scss';
 
 const Histories = ({ className }) => {
   return (
     <section
       id="histories"
-      className={className}
+      className={cx({ className }, s.histories)}
     >
       <TitileSubtitile
         title="Истории путешествий"
