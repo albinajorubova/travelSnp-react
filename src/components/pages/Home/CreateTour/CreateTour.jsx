@@ -1,14 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import cx from 'classnames';
 
 import TitileSubtitile from 'components/TitileSubtitile';
 import Form from 'components/Form';
+
+import s from './CreateTour.module.scss';
 
 const CreateTour = ({ className }) => {
   return (
     <section
       id="createTour"
-      className={className}
+      className={cx({ className }, s.createTour)}
     >
       <TitileSubtitile
         title="Собери свой тур"
