@@ -1,9 +1,15 @@
 .createTour {
   max-width: 100%;
   margin: 0 auto;
-  padding-bottom: 135px;
+  padding: 0 20px 135px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 480px) {
+  .createTour {
+    padding: 0 20px 75px 20px;
+  }
 }

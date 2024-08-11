@@ -4,7 +4,10 @@ import cx from 'classnames';
 import { useForm, Controller } from 'react-hook-form';
 import InputMask from 'react-input-mask';
 
+import RadioBtn from './RadioBtn';
+
 import s from './Form.module.scss';
+import Link from 'next/link';
 
 const Form = () => {
   const { register, handleSubmit, control, reset } = useForm();
@@ -95,7 +98,7 @@ const Form = () => {
 
     if (type === 'select') {
       return (
-        <div className={s.labInp}>
+        <div className={cx(s.labInp, s.arrow)}>
           <label className={s.label}>{label}</label>
           <select
             name={label}
@@ -168,9 +171,40 @@ const Form = () => {
           {...register('Комментарий')}
         />
       </div>
-      <div className={s.sign}>
-        <div className={s.radioBtn}></div>
-        <div className={s.accept}></div>
+      <div className={s.btnBlock}>
+        <div className={s.sign}>
+          <h3>Вам есть 18 лет?</h3>
+          <div className={s.radioBtn}>
+            <RadioBtn
+              label="Да"
+              index="1"
+            />
+            <RadioBtn
+              label="Нет"
+              index="2"
+            />
+          </div>
+        </div>
+        <div className={s.accept}>
+          <input
+            type="checkbox"
+            name="accept"
+            id="check1"
+          />
+          <label
+            className={s.fakeCheck}
+            htmlFor="check1"
+          />
+          <label
+            htmlFor="check1"
+            className={s.license}
+          >
+            Нажимая кнопку, я принимаю условия&nbsp;
+            <span>
+              <Link href="">Лицензионного договора </Link>
+            </span>
+          </label>
+        </div>
         <div className={s.submitReset}>
           <input
             type="submit"
