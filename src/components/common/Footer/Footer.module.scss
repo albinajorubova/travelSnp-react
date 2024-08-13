@@ -1,37 +1,34 @@
 .footer {
-  width: 100%;
-  height: 88px;
-  max-width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  max-width: 100%;
+  width: 100%;
+  height: 88px;
   padding: 0px;
 
   background: #f4f0e9;
 }
 
 .content {
-  max-width: 1168px;
-  width: 100%;
-  height: 28px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1168px;
+  width: 100%;
+  height: 28px;
   padding: 0px;
   margin: 0 auto;
 
   & h3 {
     font-family: 'Roboto';
-
-    color: var(--Gray-300, #a6a6a6);
-
-    font-family: Roboto;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: 142%;
+
+    color: var(--Gray-300, #a6a6a6);
   }
 }
 
@@ -47,8 +44,9 @@
 .social {
   display: flex;
   gap: 12px;
-  transition: border-bottom 0.3s ease;
   align-items: center;
+
+  transition: border-bottom 0.3s ease;
 
   & svg {
     width: 26px;
@@ -60,8 +58,9 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 142%;
-    border-bottom: 1px solid transparent;
+
     color: #1b1f2b;
+    border-bottom: 1px solid transparent;
   }
 
   &:hover span {
@@ -95,9 +94,9 @@
   }
 
   .content {
+    flex-direction: column;
     width: 318px;
     height: 28px;
-    flex-direction: column;
     gap: 0;
 
     & h3 {
@@ -125,6 +124,7 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 142%;
+
         color: #1b1f2b;
       }
     }

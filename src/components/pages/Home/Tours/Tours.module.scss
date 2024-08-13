@@ -1,7 +1,7 @@
 .block {
-  max-width: 1170px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  max-width: 1170px;
   gap: 30px;
   margin: 0 auto;
 }
@@ -19,27 +19,27 @@
 
 @media (max-width: 1024px) {
   .block {
-    max-width: 914px;
     display: grid;
-    gap: 18px;
     grid-template-columns: repeat(2, 1fr);
+    max-width: 914px;
+    gap: 18px;
   }
 }
 
 @media (max-width: 768px) {
   .block {
     display: grid;
-    gap: 18px;
     grid-template-columns: repeat(1, 1fr);
+    gap: 18px;
   }
 }
 
 @media (max-width: 480px) {
   .block {
     display: grid;
-    gap: 18px;
     grid-template-columns: repeat(1, 1fr);
     max-width: 350px;
+    gap: 18px;
   }
 
   .tour {
@@ -52,8 +52,8 @@
 @media (max-width: 360px) {
   .block {
     display: grid;
-    gap: 18px;
     grid-template-columns: repeat(1, 1fr);
     max-width: 318px;
+    gap: 18px;
   }
 }

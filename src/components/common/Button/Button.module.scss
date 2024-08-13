@@ -3,12 +3,11 @@
 }
 
 .btn {
-  width: 199px;
-  height: 42px;
-
   display: flex;
   flex-direction: row;
   align-items: center;
+  width: 199px;
+  height: 42px;
   gap: 15px;
 
   font-family: 'Roboto';
@@ -16,5 +15,6 @@
   font-weight: 700;
   font-size: 23px;
   line-height: 122%;
+
   color: #ffffff;
 }

@@ -3,11 +3,11 @@ import cx from 'classnames';
 
 import { useForm, Controller } from 'react-hook-form';
 import InputMask from 'react-input-mask';
+import Link from 'next/link';
 
 import RadioBtn from './RadioBtn';
 
 import s from './Form.module.scss';
-import Link from 'next/link';
 
 const Form = () => {
   const { register, handleSubmit, control, reset } = useForm();

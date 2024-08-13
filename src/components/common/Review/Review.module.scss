@@ -9,18 +9,20 @@
 }
 
 .item {
-  width: 570px;
-  height: 673px;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+  width: 570px;
+  height: 673px;
   padding: 40px;
-  border-radius: 50px;
+
   background: #f4f0e9;
+  border-radius: 50px;
 
   & p {
+    margin: 0;
+
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
@@ -28,14 +30,13 @@
     line-height: 122%;
 
     color: #1b1f2b;
-    margin: 0;
   }
 }
 
 .author {
-  width: 100%;
   display: flex;
   justify-content: space-between;
+  width: 100%;
 
   & img {
     width: 75px;
@@ -46,6 +47,8 @@
 
 .description {
   & h1 {
+    margin-bottom: 10px;
+
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
@@ -53,7 +56,6 @@
     line-height: 122%;
 
     color: #1b1f2b;
-    margin-bottom: 10px;
   }
 }
 
@@ -117,16 +119,16 @@
 
 @media (max-width: 360px) {
   .card {
-    gap: 18px;
     flex-direction: column;
+    gap: 18px;
     margin-top: 50px;
   }
 
   .item {
     width: 318px;
     height: auto;
-    padding: 20px;
     justify-content: normal;
+    padding: 20px;
     gap: 40px;
     border-radius: 20px;
 

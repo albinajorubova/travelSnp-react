@@ -1,12 +1,11 @@
 .tabs {
-  margin-top: 5px;
-  margin-bottom: 106px;
-
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 30px;
+  margin-top: 5px;
+  margin-bottom: 106px;
 }
 
 .link {
@@ -18,8 +17,9 @@
   line-height: 122%;
 
   color: #1b1f2b;
-  cursor: pointer;
   border-bottom: 2px solid transparent;
+
+  cursor: pointer;
 
   &:hover {
     border-bottom: 2px #1b1f2b solid;
@@ -27,8 +27,8 @@
 
   &.active {
     line-height: 122%;
-    border-bottom: 2px #efa501 solid;
     color: #efa501;
+    border-bottom: 2px #efa501 solid;
   }
 
   &.active:hover {
