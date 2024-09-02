@@ -1,38 +1,32 @@
 .item {
   position: relative;
-  width: 100%;
+  max-width: 100%;
+  width: 370px;
   height: 531px;
-
-  background: url('/images/popular/1.jpg');
-  background-repeat: no-repeat;
-  background-size: auto 110%;
+  background: url('/images/popular/1.jpg') center no-repeat;
+  background-size: 110% auto;
   background-position: 50% 50%;
-
   border-radius: 50px;
-
   transition: background-size 0.3s ease;
   transform-origin: center center;
-
   cursor: pointer;
 
   &:hover {
-    background-size: auto 120%;
+    background-size: 120% auto;
   }
 }
 
 .back {
   box-sizing: border-box;
   position: absolute;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 100%;
+  max-width: 100%;
+  width: 370px;
   height: 100%;
-
   padding: 50px;
   padding-bottom: 40px;
-
   background: linear-gradient(
     360deg,
     rgba(0, 0, 0, 0.4) 0%,
@@ -47,8 +41,8 @@
   &:hover .btn,
   &:active .btn {
     position: relative;
-    padding-left: 30px;
-    margin-left: -30px;
+    padding: 7px 20px;
+    margin-left: -20px;
     border-radius: 50px;
     overflow: visible;
   }
@@ -73,8 +67,6 @@
   & p,
   & span {
     margin: 0;
-    font-family: 'Roboto';
-    font-style: normal;
     color: #ffffff;
   }
 
@@ -113,7 +105,6 @@
   .item {
     border-radius: 20px;
     & .btn {
-      padding: 0%;
       font-size: 20px;
     }
   }
@@ -126,7 +117,6 @@
   .title {
     & p {
       font-size: 32px;
-      font-style: normal;
       font-weight: 700;
     }
   }
@@ -145,7 +135,6 @@
     border-radius: 20px;
     & .btn {
       width: 170px;
-      padding: 0%;
       font-size: 16px;
     }
   }
@@ -153,7 +142,6 @@
   .title {
     & p {
       font-size: 23px;
-      font-style: normal;
       font-weight: 700;
       & br {
         display: none;

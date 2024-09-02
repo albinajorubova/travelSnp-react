@@ -16,19 +16,14 @@
   width: 570px;
   height: 673px;
   padding: 40px;
-
   background: #f4f0e9;
   border-radius: 50px;
 
   & p {
     margin: 0;
-
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 700;
     font-size: 23px;
     line-height: 122%;
-
     color: #1b1f2b;
   }
 }
@@ -48,27 +43,19 @@
 .description {
   & h1 {
     margin-bottom: 10px;
-
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 500;
     font-size: 35px;
     line-height: 122%;
-
     color: #1b1f2b;
   }
 }
 
 .description {
   & span {
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 400;
     font-size: 17px;
     line-height: 142%;
-
     letter-spacing: -0.01em;
-
     color: #a6a6a6;
   }
 }

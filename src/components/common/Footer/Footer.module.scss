@@ -7,7 +7,6 @@
   width: 100%;
   height: 88px;
   padding: 0px;
-
   background: #f4f0e9;
 }
 
@@ -22,12 +21,9 @@
   margin: 0 auto;
 
   & h3 {
-    font-family: 'Roboto';
     font-size: 20px;
-    font-style: normal;
     font-weight: 400;
     line-height: 142%;
-
     color: var(--Gray-300, #a6a6a6);
   }
 }
@@ -45,7 +41,6 @@
   display: flex;
   gap: 12px;
   align-items: center;
-
   transition: border-bottom 0.3s ease;
 
   & svg {
@@ -53,12 +48,9 @@
     height: 26px;
   }
   & span {
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 142%;
-
     color: #1b1f2b;
     border-bottom: 1px solid transparent;
   }
@@ -119,12 +111,9 @@
       }
 
       & span {
-        font-family: 'Roboto';
-        font-style: normal;
         font-weight: 400;
         font-size: 16px;
         line-height: 142%;
-
         color: #1b1f2b;
       }
     }

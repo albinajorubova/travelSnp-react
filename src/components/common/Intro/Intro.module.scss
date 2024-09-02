@@ -1,16 +1,12 @@
 .intro {
   z-index: 0;
   position: relative;
-
   display: flex;
   justify-content: center;
-
   max-width: 100%;
   width: 100%;
   height: 52rem;
-
   margin: 0 auto;
-
   background:
     url('/images/header.jpg') center / cover no-repeat,
     lightgray 50% / cover no-repeat;
@@ -19,17 +15,11 @@
 .p {
   z-index: 1;
   position: relative;
-
-  margin: 50px 0;
-  margin-top: 40px;
-
-  font-family: 'Roboto', sans-serif;
-  font-style: normal;
+  margin: 40px 0 50px;
   font-weight: 400;
   font-size: 20px;
   line-height: 142%;
   text-align: center;
-
   color: #fff;
 }
 
@@ -40,21 +30,15 @@
   padding: 5px 20px;
   flex: none;
   flex-grow: 0;
-
-  font-family: 'Roboto';
-  font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 142%;
   letter-spacing: -0.01em;
-
   background: #ffffff;
   color: #333;
-
   border-radius: 10px;
   border: none;
   order: 2;
-
   transition: background 0.3s ease;
   cursor: pointer;
 
@@ -78,15 +62,11 @@
 .title {
   width: 768px;
   height: 315px;
-
-  font-family: 'Roboto';
-  font-style: normal;
   font-weight: 700;
   font-size: 96px;
   line-height: 109%;
   text-align: center;
   letter-spacing: 0.02em;
-
   color: #ffffff;
 }
 
@@ -118,7 +98,6 @@
   .title {
     width: 100%;
     height: auto;
-
     font-size: 55px;
   }
 }
@@ -146,7 +125,6 @@
   .p {
     max-width: 310px;
     width: 100%;
-
     font-size: 16px;
   }
 }
