@@ -1,6 +1,8 @@
 import React from 'react';
 import cx from 'classnames';
 
+import Image from 'next/image';
+
 import s from './PictureGrid.module.scss';
 
 const PictureGrid = ({ imagePaths }) => {
@@ -16,10 +18,13 @@ const PictureGrid = ({ imagePaths }) => {
           key={index}
           id={index}
         >
-          <img
+          <Image
             className={s.img}
-            src={path}
+            width="200"
+            height="200"
+            src={path.startsWith('/') ? path : `/${path}`}
             alt={`Travel photo ${index + 1}`}
+            priority={true}
           />
         </div>
       ))}

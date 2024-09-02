@@ -1,16 +1,19 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 import s from './TravelTime.module.scss';
 
 const TravelTime = () => {
   return (
     <section className={s.block}>
-      <img
-        src="images/footer.jpg"
+      <Image
+        width="200"
+        height="200"
+        src="/images/footer.jpg"
         alt="#"
+        priority={true}
       />
       <div className={s.text}>
         <h1>Пора в путешествие вместе с нами!</h1>

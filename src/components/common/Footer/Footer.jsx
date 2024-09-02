@@ -1,6 +1,4 @@
 import React from 'react';
-import cx from 'classnames';
-import { string } from 'prop-types';
 
 import Link from 'next/link';
 

@@ -1,5 +1,14 @@
+import Head from 'next/head';
+
 import Home from 'pages/Home';
 
-const HomePage = () => <Home />;
+const HomePage = () => (
+  <>
+    <Head>
+      <title>YourTour</title>
+    </Head>
+    <Home />
+  </>
+);
 
 export default HomePage;
