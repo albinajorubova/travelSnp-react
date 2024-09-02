@@ -8,8 +8,8 @@ const TitleSubtitile = ({ title, text1, text2 }) => {
     <div className={s.block}>
       <h1 className={s.title}>{title}</h1>
       <div className={s.subTitile}>
-        <p className={s.text1}>{text1}</p>
-        <p className={s.text2}>{text2}</p>
+        {text1 && <p className={s.text1}>{text1}</p>}
+        {text2 && <p className={s.text2}>{text2}</p>}
       </div>
     </div>
   );
@@ -17,8 +17,13 @@ const TitleSubtitile = ({ title, text1, text2 }) => {
 
 TitleSubtitile.propTypes = {
   title: PropTypes.string.isRequired,
-  text1: PropTypes.string.isRequired,
-  text2: PropTypes.string.isRequired,
+  text1: PropTypes.string,
+  text2: PropTypes.string,
+};
+
+TitleSubtitile.defaultProps = {
+  text1: null,
+  text2: null,
 };
 
 export default React.memo(TitleSubtitile);
