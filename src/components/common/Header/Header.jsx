@@ -33,7 +33,6 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      console.log('window.scrollY:', window.scrollY);
       if (window.scrollY >= 450) {
         setFix(true);
       } else {
@@ -42,6 +41,9 @@ const Header = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   return (

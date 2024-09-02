@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import cx from 'classnames';
-import { string } from 'prop-types';
 
 import Link from 'next/link';
 
@@ -15,13 +14,11 @@ const DATA = [
     text: 'Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений:',
     list: ['вкусная еда', 'дешевый транспорт', 'красивый город.'],
     src: '/images/story_photo/1.jpg',
-    nav: {
-      instagram: 'instagram',
-      facebook: 'facebook',
-      YouTube: 'YouTube',
-      Vk: '',
-    },
-    href: '#histories',
+    nav: [
+      { text: 'instagram', link: 'instagram.com' },
+      { text: 'facebook', link: 'facebook.com' },
+      { text: 'YouTube', link: 'youtube.com' },
+    ],
   },
   {
     id: 2,
@@ -29,13 +26,10 @@ const DATA = [
     text: 'Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений:',
     list: '',
     src: '/images/story_photo/2.jpg',
-    nav: {
-      instagram: 'instagram',
-      facebook: '',
-      YouTube: '',
-      Vk: 'ВКонтакте',
-    },
-    href: '#histories',
+    nav: [
+      { text: 'instagram', link: 'instagram.com' },
+      { text: 'ВКонтакте', link: 'vk.com' },
+    ],
   },
   {
     id: 3,
@@ -43,13 +37,11 @@ const DATA = [
     text: 'Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений:',
     list: '',
     src: '/images/story_photo/3.jpg',
-    nav: {
-      instagram: 'instagram',
-      facebook: 'facebook',
-      YouTube: '',
-      Vk: 'ВКонтакте',
-    },
-    href: '#histories',
+    nav: [
+      { text: 'instagram', link: 'instagram.com' },
+      { text: 'facebook', link: 'facebook.com' },
+      { text: 'ВКонтакте', link: 'vk.com' },
+    ],
   },
 ];
 
@@ -98,16 +90,14 @@ const HistoryCard = () => {
                 })}
               />
               <nav className={s.social}>
-                {item.nav.instagram && (
-                  <Link href={item.nav.instagram}>Instagram</Link>
-                )}
-                {item.nav.facebook && (
-                  <Link href={item.nav.facebook}>facebook</Link>
-                )}
-                {item.nav.YouTube && (
-                  <Link href={item.nav.YouTube}>YouTube</Link>
-                )}
-                {item.nav.Vk && <Link href={item.nav.Vk}>ВКонтакте</Link>}
+                {item.nav.map((nav, index) => (
+                  <Link
+                    href={nav.link}
+                    key={index}
+                  >
+                    {nav.text}
+                  </Link>
+                ))}
               </nav>
             </section>
           </div>
