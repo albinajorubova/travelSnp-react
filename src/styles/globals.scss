@@ -16,6 +16,14 @@ body {
     Droid Sans,
     Helvetica Neue,
     sans-serif;
+
+  width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  background: #f9f7f4;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 a {
@@ -23,6 +31,8 @@ a {
   text-decoration: none;
 }
 
-* {
+*,
+*:after,
+*:before {
   box-sizing: border-box;
 }

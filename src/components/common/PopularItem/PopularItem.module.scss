@@ -1,0 +1,151 @@
+.item {
+  position: relative;
+  max-width: 100%;
+  width: 370px;
+  height: 531px;
+  background: url('/images/popular/1.jpg') center no-repeat;
+  background-size: 110% auto;
+  background-position: 50% 50%;
+  border-radius: 50px;
+  transition: background-size 0.3s ease;
+  transform-origin: center center;
+  cursor: pointer;
+
+  &:hover {
+    background-size: 120% auto;
+  }
+}
+
+.back {
+  box-sizing: border-box;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 100%;
+  width: 370px;
+  height: 100%;
+  padding: 50px;
+  padding-bottom: 40px;
+  background: linear-gradient(
+    360deg,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.06) 48.44%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  border-radius: 50px;
+}
+
+.item,
+.back {
+  &:hover .btn,
+  &:active .btn {
+    position: relative;
+    padding: 7px 20px;
+    margin-left: -20px;
+    border-radius: 50px;
+    overflow: visible;
+  }
+
+  &:hover .btn {
+    background: #286562;
+    transition: background 0.1s ease;
+  }
+
+  &:active .btn {
+    z-index: 1;
+    background: #efa501;
+  }
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+
+  & p,
+  & span {
+    margin: 0;
+    color: #ffffff;
+  }
+
+  & p {
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 122%;
+  }
+
+  & span {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 142%;
+    letter-spacing: -0.01em;
+  }
+}
+
+@media (max-width: 1440px) {
+  .item {
+    width: 100%;
+  }
+
+  .back {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .item {
+    background-size: 110% auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .item {
+    border-radius: 20px;
+    & .btn {
+      font-size: 20px;
+    }
+  }
+
+  .back {
+    padding: 25px;
+    border-radius: 20px;
+  }
+
+  .title {
+    & p {
+      font-size: 32px;
+      font-weight: 700;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .item {
+    height: 350px;
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 360px) {
+  .item {
+    height: 318px;
+    border-radius: 20px;
+    & .btn {
+      width: 170px;
+      font-size: 16px;
+    }
+  }
+
+  .title {
+    & p {
+      font-size: 23px;
+      font-weight: 700;
+      & br {
+        display: none;
+      }
+    }
+  }
+}

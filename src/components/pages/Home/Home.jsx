@@ -1,16 +1,29 @@
 import React from 'react';
-import { string } from 'prop-types';
 import cx from 'classnames';
-import Hero from './Hero/Hero';
-import Footer from 'components/Footer/Footer';
+import { string } from 'prop-types';
+
+import Footer from 'components/Footer';
+import TravelTime from 'components/TravelTime';
+
+import Hero from './Hero';
+import CreateTour from './CreateTour';
+import Tours from './Tours';
+import Reviews from './Reviews';
+import Pictures from './Pictures';
+import Histories from './Histories';
 
 import s from './Home.module.scss';
 
 const Home = ({ className }) => {
   return (
     <div className={cx(s.root, className)}>
-      <Hero />
-      Home
+      <Hero className={s.section} />
+      <Tours className={s.section} />
+      <CreateTour className={s.section} />
+      <Reviews className={s.section} />
+      <Pictures className={s.section} />
+      <Histories className={s.section} />
+      <TravelTime />
       <Footer />
     </div>
   );
@@ -19,7 +32,5 @@ const Home = ({ className }) => {
 Home.propTypes = {
   className: string,
 };
-
-Home.defaultProps = {};
 
 export default React.memo(Home);

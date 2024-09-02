@@ -1,0 +1,130 @@
+.intro {
+  z-index: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  width: 100%;
+  height: 52rem;
+  margin: 0 auto;
+  background:
+    url('/images/header.jpg') center / cover no-repeat,
+    lightgray 50% / cover no-repeat;
+}
+
+.p {
+  z-index: 1;
+  position: relative;
+  margin: 40px 0 50px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 142%;
+  text-align: center;
+  color: #fff;
+}
+
+.button {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 5px 20px;
+  flex: none;
+  flex-grow: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 142%;
+  letter-spacing: -0.01em;
+  background: #ffffff;
+  color: #333;
+  border-radius: 10px;
+  border: none;
+  order: 2;
+  transition: background 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    background: #efa501;
+    color: #ffffff;
+  }
+
+  &:active {
+    background: #f8e6be;
+    color: #333;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  padding-top: 89px;
+}
+
+.title {
+  width: 768px;
+  height: 315px;
+  font-weight: 700;
+  font-size: 96px;
+  line-height: 109%;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .intro {
+    background:
+      linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 39.9%),
+      linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%),
+      url('/images/header1024.png') center / cover no-repeat,
+      lightgray 50% / cover no-repeat;
+  }
+  .p {
+    max-width: 442px;
+    width: 100%;
+    & br {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    width: 100%;
+    height: auto;
+    font-size: 55px;
+  }
+}
+
+@media (max-width: 360px) {
+  .intro {
+    background:
+      linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 39.9%),
+      linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%),
+      url('/images/header1024.png') center / auto 100% no-repeat,
+      lightgray 50% / cover no-repeat;
+  }
+
+  .intro {
+    width: 360px;
+    height: 530px;
+  }
+  .title {
+    width: auto;
+    height: auto;
+
+    font-size: 34px;
+  }
+
+  .p {
+    max-width: 310px;
+    width: 100%;
+    font-size: 16px;
+  }
+}

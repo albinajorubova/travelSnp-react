@@ -1,14 +1,23 @@
-import Intro from 'src/components/Intro/Intro';
-import Header from 'components/Header/Header';
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const Hero = () => {
+import Intro from 'components/Intro';
+import Header from 'components/Header';
+
+const Hero = ({ className }) => {
   return (
-    <>
+    <section
+      id="Hero"
+      className={className}
+    >
       <Header />
       <Intro />
-    </>
+    </section>
   );
 };
 
-export default Hero;
+Hero.propTypes = {
+  className: PropTypes.string,
+};
+
+export default React.memo(Hero);

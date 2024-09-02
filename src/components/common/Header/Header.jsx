@@ -1,53 +1,70 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import cx from 'classnames';
+
 import Link from 'next/link';
+
 import s from './Header.module.scss';
 
-const links = [
+const LINKS = [
   {
     id: 1,
     title: 'Туры',
-    url: '#chooseTour',
+    href: '#tours',
   },
   {
     id: 2,
     title: 'Создать Тур',
-    url: '#createTour',
+    href: '#createTour',
   },
   {
     id: 3,
     title: 'Отзывы',
-    url: '#reviews',
+    href: '#reviews',
   },
   {
     id: 4,
     title: 'Истории',
-    url: '#story',
+    href: '#histories',
   },
 ];
 
 const Header = () => {
+  const [fix, setFix] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY >= 450) {
+        setFix(true);
+      } else {
+        setFix(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <header className={s.header}>
-      <div
-        className={s.scroll__header}
-        id="scroll1"
-      >
-        <div className={s.header__inner}>
+      <div className={cx(fix ? [s.scroll] : [s.noscroll])}>
+        <div className={s.inner}>
           <Link
             href="#"
             passHref
-            className={s.header__logo}
+            className={s.logo}
           >
             YourTour
           </Link>
 
-          <nav className={s.header__nav}>
-            {links.map(link => (
+          <nav className={s.nav}>
+            {LINKS.map(link => (
               <Link
                 key={link.id}
-                href={link.url}
+                href={link.href}
                 passHref
-                className={s.nav__link}
+                className={s.link}
               >
                 {link.title}
               </Link>
@@ -55,7 +72,7 @@ const Header = () => {
           </nav>
           <Link
             href="tel:+7 999 999 99 99"
-            className={`${s.nav__link} ${s.numb}`}
+            className={cx(s.link, s.numb)}
           >
             +7 999 999 99 99
           </Link>
@@ -65,4 +82,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default React.memo(Header);

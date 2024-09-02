@@ -1,0 +1,50 @@
+.block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 142%;
+  text-align: center;
+  color: #a6a6a6;
+}
+
+.title {
+  max-width: 800px;
+  font-weight: 700;
+  font-size: 59px;
+  line-height: 124%;
+  text-align: center;
+  color: #1b1f2b;
+}
+
+@media (max-width: 768px) {
+  .block {
+    font-size: 24px;
+  }
+  .title {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 360px) {
+  .subTitile {
+    & p {
+      width: 318px;
+      & br {
+        display: none;
+      }
+    }
+  }
+
+  .block {
+    gap: 20px;
+    font-size: 16px;
+  }
+
+  .title {
+    font-size: 34px;
+  }
+}

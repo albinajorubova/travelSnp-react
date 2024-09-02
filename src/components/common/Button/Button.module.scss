@@ -1,3 +1,17 @@
 .root {
   position: relative;
 }
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 199px;
+  width: 100%;
+  height: 42px;
+  gap: 15px;
+  font-weight: 700;
+  font-size: 23px;
+  line-height: 122%;
+  color: #ffffff;
+}
