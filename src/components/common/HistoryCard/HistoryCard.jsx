@@ -24,7 +24,6 @@ const DATA = [
     id: 2,
     title: 'Автостопом в Стамбул',
     text: 'Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений:',
-    list: '',
     src: '/images/story_photo/2.jpg',
     nav: [
       { text: 'instagram', link: 'instagram.com' },
@@ -35,7 +34,6 @@ const DATA = [
     id: 3,
     title: 'Автостопом в Стамбул',
     text: 'Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений:',
-    list: '',
     src: '/images/story_photo/3.jpg',
     nav: [
       { text: 'instagram', link: 'instagram.com' },
@@ -68,20 +66,14 @@ const HistoryCard = () => {
               <p className={s.text}>{item.text}</p>
               <br />
               <br />
-              {Array.isArray(item.list) && item.list.length > 0 && (
-                <>
-                  {item.list
-                    .filter(listItem => listItem !== '')
-                    .map((listItem, index) => (
-                      <li
-                        key={index}
-                        className={s.li}
-                      >
-                        {listItem}
-                      </li>
-                    ))}
-                </>
-              )}
+              {item.list?.map((listItem, index) => (
+                <li
+                  key={index}
+                  className={s.li}
+                >
+                  {listItem}
+                </li>
+              ))}
             </div>
             <section className={s.navBlock}>
               <Button

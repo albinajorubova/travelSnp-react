@@ -2,6 +2,8 @@ import React from 'react';
 
 import Image from 'next/image';
 
+import insertBr from 'utils/insertBr';
+
 import s from './Review.module.scss';
 
 const REVIEWS = [
@@ -19,21 +21,7 @@ const REVIEWS = [
   },
 ];
 
-const insertBr = text => {
-  const maxLength = 299;
-  const breakLength = 168;
-
-  if (text.length > maxLength) {
-    return (
-      text.slice(0, breakLength) + '<br /><br />' + text.slice(breakLength)
-    );
-  }
-  return text;
-};
-
 const Review = () => {
-  const path = require('path');
-
   return (
     <div className={s.card}>
       {REVIEWS.map((reviews, index) => (

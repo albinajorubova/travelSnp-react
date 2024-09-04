@@ -1,10 +1,10 @@
 import React from 'react';
 
-import s from './Form.module.scss';
+import s from './RadioBtn.module.scss';
 
 const RadioBtn = ({ index, label }) => {
   return (
-    <div className={s.radioBlock}>
+    <div className={s.block}>
       <input
         type="radio"
         name="YesNo"
@@ -16,7 +16,7 @@ const RadioBtn = ({ index, label }) => {
       />
       <label
         htmlFor={`radio${index}`}
-        className={s.radioLabel}
+        className={s.label}
       >
         {label}
       </label>
