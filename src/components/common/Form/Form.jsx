@@ -3,8 +3,8 @@ import { useForm } from 'react-hook-form';
 
 import Link from 'next/link';
 
-import Input from './Input/Input';
-import RadioBtn from './RadioBtn/RadioBtn';
+import Input from './Input';
+import RadioBtn from './RadioBtn';
 
 import s from './Form.module.scss';
 
