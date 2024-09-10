@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import cx from 'classnames';
+import PropTypes from 'prop-types';
 
 import { Controller } from 'react-hook-form';
 import InputMask from 'react-input-mask';
@@ -77,6 +78,25 @@ const Input = ({
       />
     </div>
   );
+};
+
+Input.propTypes = {
+  label: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  placeholder: PropTypes.string,
+  onFocus: PropTypes.func,
+  onBlur: PropTypes.func,
+  register: PropTypes.func.isRequired,
+  required: PropTypes.bool,
+  component: PropTypes.oneOf(['masked']),
+  control: PropTypes.object,
+  options: PropTypes.arrayOf(
+    PropTypes.shape({
+      value: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      isPlaceholder: PropTypes.bool,
+    })
+  ),
 };
 
 export default Input;

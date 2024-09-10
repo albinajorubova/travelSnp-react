@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import s from './RadioBtn.module.scss';
 
@@ -22,6 +23,11 @@ const RadioBtn = ({ index, label }) => {
       </label>
     </div>
   );
+};
+
+RadioBtn.propTypes = {
+  index: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  label: PropTypes.string.isRequired,
 };
 
 export default React.memo(RadioBtn);
