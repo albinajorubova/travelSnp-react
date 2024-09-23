@@ -124,15 +124,15 @@ const Form = () => {
             className={s.fakeCheck}
             htmlFor="check1"
           />
-          <label
-            htmlFor="check1"
+          <div
+            // htmlFor="check1"
             className={s.license}
           >
             Нажимая кнопку, я принимаю условия&nbsp;
             <span>
               <Link href="#createTour">Лицензионного договора </Link>
             </span>
-          </label>
+          </div>
         </div>
 
         <div className={s.submitReset}>

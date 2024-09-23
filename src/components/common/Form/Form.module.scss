@@ -128,7 +128,8 @@
   display: flex;
   justify-content: center;
   gap: 19px;
-  & label {
+  & label,
+  & .license {
     font-weight: 400;
     font-size: 17px;
     line-height: 142%;

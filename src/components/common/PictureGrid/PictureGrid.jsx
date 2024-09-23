@@ -22,7 +22,7 @@ const PictureGrid = ({ imagePaths }) => {
             width="300"
             height="300"
             src={path.startsWith('/') ? path : `/${path}`}
-            alt={`Travel photo`}
+            alt="Travel photo"
             priority
           />
         </div>

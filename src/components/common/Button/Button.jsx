@@ -8,7 +8,10 @@ import s from './Button.module.scss';
 
 const Button = ({ className }) => {
   return (
-    <button className={cx(s.btn, className)}>
+    <button
+      className={cx(s.btn, className)}
+      type="button"
+    >
       Подробнее
       <Image
         width="22"
