@@ -15,12 +15,7 @@ const RadioBtn = ({ index, label }) => {
         className={s.fakeInput}
         htmlFor={`radio${index}`}
       />
-      <div
-        // htmlFor={`radio${index}`}
-        className={s.label}
-      >
-        {label}
-      </div>
+      <div className={s.label}>{label}</div>
     </div>
   );
 };

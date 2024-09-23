@@ -3,12 +3,7 @@
     "ecmaVersion": 7,
     "sourceType": "module"
   },
-  "plugins": [
-    "react",
-    "react-hooks",
-    "prettier",
-    "jsx-a11y"
-  ],
+  "plugins": ["react", "react-hooks", "prettier", "jsx-a11y"],
   "extends": [
     "airbnb",
     "eslint:recommended",
@@ -46,10 +41,7 @@
     "react/jsx-filename-extension": [
       "error",
       {
-        "extensions": [
-          ".js",
-          ".jsx"
-        ]
+        "extensions": [".js", ".jsx"]
       }
     ],
     "import/no-extraneous-dependencies": [
@@ -61,9 +53,7 @@
     "jsx-a11y/anchor-is-valid": [
       "error",
       {
-        "specialLink": [
-          "to"
-        ]
+        "specialLink": ["to"]
       }
     ],
     "jsx-a11y/no-static-element-interactions": "off",
@@ -71,9 +61,8 @@
     "react/forbid-prop-types": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "func-names": [
-      "error",
-      "never"
-    ]
+    "jsx-a11y/label-has-associated-control": "off",
+    "react/button-has-type": "off",
+    "func-names": ["error", "never"]
   }
 }

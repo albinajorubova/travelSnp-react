@@ -85,14 +85,14 @@ const Form = () => {
 
       <div className={s.labInp}>
         <label
-          htmlFor="sName"
+          htmlFor="textarea"
           className={s.label}
         >
           Комментарий
         </label>
         <textarea
-          name="sName"
-          id="sName"
+          name="textarea"
+          id="textarea"
           placeholder=""
           className={s.textarea}
           {...register('Комментарий')}
