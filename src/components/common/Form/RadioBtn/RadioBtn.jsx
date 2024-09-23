@@ -11,7 +11,7 @@ const RadioBtn = ({ index, label }) => {
         name="YesNo"
         id={`radio${index}`}
       />
-      <label
+      <div
         className={s.fakeInput}
         htmlFor={`radio${index}`}
       />

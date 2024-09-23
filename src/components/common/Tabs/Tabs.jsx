@@ -18,6 +18,7 @@ const Tabs = () => {
         <button
           href=""
           key={tab}
+          type="button"
           className={cx(s.btn, { [s.active]: activeTab === tab })}
           onClick={() => handleClick(tab)}
         >

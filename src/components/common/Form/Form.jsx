@@ -1,6 +1,6 @@
 import React from 'react';
-import { useForm } from 'react-hook-form';
 
+import { useForm } from 'react-hook-form';
 import Link from 'next/link';
 
 import Input from './Input';
@@ -66,9 +66,9 @@ const Form = () => {
       className={s.form}
     >
       <div className={s.block}>
-        {DATA.map((data, index) => (
+        {DATA.map(data => (
           <Input
-            key={index}
+            key={data.label}
             label={data.label}
             type={data.type}
             placeholder={data.placeholder}
@@ -82,6 +82,7 @@ const Form = () => {
           />
         ))}
       </div>
+
       <div className={s.labInp}>
         <label
           htmlFor="sName"
@@ -97,6 +98,7 @@ const Form = () => {
           {...register('Комментарий')}
         />
       </div>
+
       <div className={s.btnBlock}>
         <div className={s.sign}>
           <h3>Вам есть 18 лет?</h3>
@@ -111,6 +113,7 @@ const Form = () => {
             />
           </div>
         </div>
+
         <div className={s.accept}>
           <input
             type="checkbox"
@@ -131,6 +134,7 @@ const Form = () => {
             </span>
           </label>
         </div>
+
         <div className={s.submitReset}>
           <input
             type="submit"

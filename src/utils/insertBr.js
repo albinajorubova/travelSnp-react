@@ -3,9 +3,7 @@ const insertBr = text => {
   const breakLength = 168;
 
   if (text.length > maxLength) {
-    return (
-      text.slice(0, breakLength) + '<br /><br />' + text.slice(breakLength)
-    );
+    return `${text.slice(0, breakLength)}<br /><br />${text.slice(breakLength)}`;
   }
   return text;
 };

@@ -21,16 +21,24 @@ const Input = ({
 }) => {
   const [inputType, setInputType] = useState(type);
 
+  const inputId = `input-${label.replace(/\s+/g, '-').toLowerCase()}`;
+
   if (component === 'masked') {
     return (
       <div className={s.block}>
-        <label className={s.label}>{label}</label>
+        <label
+          htmlFor={inputId}
+          className={s.label}
+        >
+          {label}
+        </label>
         <Controller
           name="phone"
           control={control}
           rules={{ required }}
-          render={({ field }) => (
+          render={() => (
             <InputMask
+              id={inputId}
               mask="+7 (999) 999-99-99"
               placeholder="+7 (___) ___-__-__"
               className={s.input}
@@ -45,8 +53,14 @@ const Input = ({
   if (type === 'select') {
     return (
       <div className={cx(s.block, s.arrow)}>
-        <label className={s.label}>{label}</label>
+        <label
+          htmlFor={inputId}
+          className={s.label}
+        >
+          {label}
+        </label>
         <select
+          id={inputId}
           name={label}
           className={cx(s.input, s.select)}
           {...register(label, { required })}
@@ -67,8 +81,14 @@ const Input = ({
 
   return (
     <div className={s.block}>
-      <label className={s.label}>{label}</label>
+      <label
+        htmlFor={inputId}
+        className={s.label}
+      >
+        {label}
+      </label>
       <input
+        id={inputId}
         type={inputType}
         className={s.input}
         placeholder={placeholder}

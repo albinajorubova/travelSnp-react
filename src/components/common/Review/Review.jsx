@@ -14,7 +14,7 @@ const REVIEWS = [
     img: '/images/review/photo-1.jpg',
   },
   {
-    text: ' Равным образом постоянный количественный рост и сфера нашей активности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. Значимость этих проблем настолько очевидна, что дальнейшее  развитие различных форм деятельности обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Повседневная практика показывает, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития.',
+    text: ' Равным образом постоянный количественный рост и сфера нашей активности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. Значимость этих проблем настолько очевидна, что дальнейшее  развитие различных форм деятельности обеспечивает широкому кругу (специалистов) участие в формировании новых предложений.',
     autor: 'Павел',
     tour: 'Путешествие в горы',
     img: '/images/review/photo-2.jpg',
@@ -24,24 +24,23 @@ const REVIEWS = [
 const Review = () => {
   return (
     <div className={s.card}>
-      {REVIEWS.map((reviews, index) => (
+      {REVIEWS.map(review => (
         <div
-          key={index}
+          key={`${review.autor}-${review.tour}`}
           className={s.item}
         >
-          <p dangerouslySetInnerHTML={{ __html: insertBr(reviews.text) }} />
+          <p dangerouslySetInnerHTML={{ __html: insertBr(review.text) }} />
           <div className={s.author}>
             <div className={s.description}>
-              <h1>{reviews.autor}</h1>
-              <span>Тур: {reviews.tour}</span>
+              <h1>{review.autor}</h1>
+              <span>Тур: {review.tour}</span>
             </div>
-
             <Image
               width="100"
               height="100"
-              src={reviews.img.startsWith('/') ? reviews.img : reviews.img}
-              alt={reviews.autor}
-              priority={true}
+              src={review.img.startsWith('/') ? review.img : `/${review.img}`}
+              alt={review.autor}
+              priority
             />
           </div>
         </div>

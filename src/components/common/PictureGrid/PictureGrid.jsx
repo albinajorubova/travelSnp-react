@@ -12,19 +12,18 @@ const PictureGrid = ({ imagePaths }) => {
 
   return (
     <div className={CLASSNAME}>
-      {imagePaths.map((path, index) => (
+      {imagePaths.map(path => (
         <div
           className={s.item}
-          key={index}
-          id={index}
+          key={path}
         >
           <Image
             className={s.img}
-            width="200"
-            height="200"
+            width="300"
+            height="300"
             src={path.startsWith('/') ? path : `/${path}`}
-            alt={`Travel photo ${index + 1}`}
-            priority={true}
+            alt={`Travel photo`}
+            priority
           />
         </div>
       ))}

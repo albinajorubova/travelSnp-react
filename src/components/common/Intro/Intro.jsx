@@ -12,7 +12,12 @@ const Intro = () => {
             Идейные соображения высшего порядка, а также рамки и <br />
             место обучения кадров
           </p>
-          <button className={s.button}>Найти тур</button>
+          <button
+            type="button"
+            className={s.button}
+          >
+            Найти тур
+          </button>
         </div>
       </div>
     </section>

@@ -66,9 +66,9 @@ const HistoryCard = () => {
               <p className={s.text}>{item.text}</p>
               <br />
               <br />
-              {item.list?.map((listItem, index) => (
+              {item.list?.map(listItem => (
                 <li
-                  key={index}
+                  key={listItem}
                   className={s.li}
                 >
                   {listItem}
@@ -82,12 +82,12 @@ const HistoryCard = () => {
                 })}
               />
               <nav className={s.social}>
-                {item.nav.map((nav, index) => (
+                {item.nav.map(navItem => (
                   <Link
-                    href={nav.link}
-                    key={index}
+                    href={navItem.link}
+                    key={`${navItem.text}-${navItem.link}`}
                   >
-                    {nav.text}
+                    {navItem.text}
                   </Link>
                 ))}
               </nav>

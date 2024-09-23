@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 import s from './Button.module.scss';
 
-const Button = ({ className, type }) => {
+const Button = ({ className }) => {
   return (
     <button className={cx(s.btn, className)}>
       Подробнее
@@ -22,7 +22,6 @@ const Button = ({ className, type }) => {
 
 Button.propTypes = {
   className: PropTypes.string,
-  type: PropTypes.string,
 };
 
 export default React.memo(Button);

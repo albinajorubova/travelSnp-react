@@ -13,7 +13,7 @@ const TravelTime = () => {
         height="200"
         src="/images/footer.jpg"
         alt="#"
-        priority={true}
+        priority
       />
       <div className={s.text}>
         <h1>Пора в путешествие вместе с нами!</h1>

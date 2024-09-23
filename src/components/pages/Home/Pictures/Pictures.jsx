@@ -40,10 +40,10 @@ const Pictures = ({ className }) => {
         text2="а также рамки и место обучения кадров"
       />
       <div className={s.container}>
-        {PHOTOS.map((photos, index) => (
+        {PHOTOS.map(photos => (
           <PictureGrid
             imagePaths={photos}
-            key={index}
+            key={photos[0]}
           />
         ))}
       </div>

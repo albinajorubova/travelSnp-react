@@ -50,9 +50,9 @@ const Tours = ({ className }) => {
       <TitileSubtitile title="Выбери свой тур" />
       <Tabs />
       <div className={s.block}>
-        {CARDSDATA.map((card, index) => (
+        {CARDSDATA.map(card => (
           <PopularItem
-            key={index}
+            key={`${card.title}-${card.imageSrc}`}
             title={card.title}
             price={card.price}
             imageSrc={card.imageSrc}
