@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import cx from 'classnames';
+import PropTypes from 'prop-types';
 
 import { Controller } from 'react-hook-form';
 import InputMask from 'react-input-mask';
 
-import s from './Form.module.scss';
+import s from './Input.module.scss';
 
 const Input = ({
   label,
@@ -22,7 +23,7 @@ const Input = ({
 
   if (component === 'masked') {
     return (
-      <div className={s.labInp}>
+      <div className={s.block}>
         <label className={s.label}>{label}</label>
         <Controller
           name="phone"
@@ -33,7 +34,7 @@ const Input = ({
               mask="+7 (999) 999-99-99"
               placeholder="+7 (___) ___-__-__"
               className={s.input}
-              {...field}
+              {...register(label, { required })}
             />
           )}
         />
@@ -43,7 +44,7 @@ const Input = ({
 
   if (type === 'select') {
     return (
-      <div className={cx(s.labInp, s.arrow)}>
+      <div className={cx(s.block, s.arrow)}>
         <label className={s.label}>{label}</label>
         <select
           name={label}
@@ -65,7 +66,7 @@ const Input = ({
   }
 
   return (
-    <div className={s.labInp}>
+    <div className={s.block}>
       <label className={s.label}>{label}</label>
       <input
         type={inputType}
@@ -77,6 +78,25 @@ const Input = ({
       />
     </div>
   );
+};
+
+Input.propTypes = {
+  label: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  placeholder: PropTypes.string,
+  onFocus: PropTypes.func,
+  onBlur: PropTypes.func,
+  register: PropTypes.func.isRequired,
+  required: PropTypes.bool,
+  component: PropTypes.oneOf(['masked']),
+  control: PropTypes.object,
+  options: PropTypes.arrayOf(
+    PropTypes.shape({
+      value: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      isPlaceholder: PropTypes.bool,
+    })
+  ),
 };
 
 export default Input;

@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-import s from './Form.module.scss';
+import s from './RadioBtn.module.scss';
 
 const RadioBtn = ({ index, label }) => {
   return (
-    <div className={s.radioBlock}>
+    <div className={s.block}>
       <input
         type="radio"
         name="YesNo"
@@ -16,12 +17,17 @@ const RadioBtn = ({ index, label }) => {
       />
       <label
         htmlFor={`radio${index}`}
-        className={s.radioLabel}
+        className={s.label}
       >
         {label}
       </label>
     </div>
   );
+};
+
+RadioBtn.propTypes = {
+  index: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  label: PropTypes.string.isRequired,
 };
 
 export default React.memo(RadioBtn);

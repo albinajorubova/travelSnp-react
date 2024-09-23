@@ -1,0 +1,96 @@
+.hide {
+  display: none;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+.label {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 142%;
+  color: #1b1f2b;
+}
+
+.input {
+  max-width: 100%;
+  max-height: 68px;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 142%;
+  color: rgb(27, 31, 43);
+  background: rgb(249, 247, 244);
+  border: 1px solid rgb(244, 240, 233);
+  border-radius: 10px;
+  transition: background 0.2s ease 0s;
+
+  &::placeholder {
+    color: rgba(166, 166, 166, 1);
+  }
+}
+
+.arrow {
+  position: relative;
+  &::before {
+    content: '';
+    z-index: 100;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    display: block;
+    width: 26px;
+    height: 26px;
+    background-image: url('/images/form_input.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.select {
+  color: rgba(166, 166, 166, 1);
+  cursor: pointer;
+}
+
+.input:hover,
+.select:hover,
+.input:focus,
+.select:focus {
+  background: #f4f0e9;
+}
+.input:focus,
+.input:active,
+.select:focus,
+.select:active {
+  outline: 1px solid var(--Gray-300, #a6a6a6);
+  border: 1px solid var(--Gray-300, #a6a6a6);
+}
+
+.input:hover {
+  border-radius: 10px;
+}
+
+@media (max-width: 360px) {
+  .label {
+    font-size: 16px;
+  }
+
+  .input,
+  .select {
+    width: 278px;
+    height: 43px;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .arrow::before {
+    bottom: 9px;
+  }
+}

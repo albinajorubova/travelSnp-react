@@ -1,3 +1,3 @@
-const isType = (data, type) => typeof data === type; // eslint-disable-line
+const isType = (data, type) => typeof data === type;
 
 export default isType;
